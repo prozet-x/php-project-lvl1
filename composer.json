@@ -1,6 +1,11 @@
 {
     "name": "hexlet/code",
     "type": "project",
+    "license": "proprietary",
+    "description": "First PHP-project on Hexlet school",
+    "bin": [
+        "bin/brain-games"
+      ],
     "autoload": {
         "psr-4": {
             "Hexlet\\Code\\": "src/"
