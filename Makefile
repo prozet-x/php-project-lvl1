@@ -5,6 +5,9 @@ install: #Установка всех зависимостей
 brain-games:
 	php bin/brain-games
 
+brain-even:
+	./bin/brain-even
+
 validate:
 	composer validate
 
