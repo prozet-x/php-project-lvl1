@@ -7,13 +7,14 @@ use function cli\prompt;
 
 const MAX_QUESTIONS = 3;
 
-function Engine($name, $rules, $questionFunc)
+function engine($name, $rules, $makeQuestionAndAnswer)
 {
     line($rules);
     for ($i = 1; $i <= MAX_QUESTIONS; $i++) {
-        $num = rand(0, 99);
-        $rightAnswer = $num % 2 === 0 ? YES : NO;
-        $answer = prompt("Question: {$num}: ");
+        $qA = $makeQuestionAndAnswer();
+        $question = $qA[0];
+        $rightAnswer = $qA[1];
+        $answer = prompt("Question: {$question}: ");
         if ($answer != $rightAnswer) {
             line("'{$answer}' is wrong answer ;(. Correct answer was '{$rightAnswer}'.");
             line("Let's try again, {$name}!");
