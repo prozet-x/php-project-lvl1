@@ -1,16 +1,15 @@
 <?php
 
-namespace BrainGames\BrainEven;
+namespace BrainGames\Engine;
 
 use function cli\line;
 use function cli\prompt;
 
-const YES = "yes";
-const NO = "no";
+const MAX_QUESTIONS = 3;
 
-function brainEvenGame($name)
+function Engine($name, $rules, $questionFunc)
 {
-    line("Answer \"yes\" if the number is even, otherwise answer \"no\".");
+    line($rules);
     for ($i = 1; $i <= MAX_QUESTIONS; $i++) {
         $num = rand(0, 99);
         $rightAnswer = $num % 2 === 0 ? YES : NO;
