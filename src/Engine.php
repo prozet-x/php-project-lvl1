@@ -7,7 +7,7 @@ use function cli\prompt;
 
 const MAX_QUESTIONS = 3;
 
-function engine($name, $rules, $makeQuestionAndAnswer)
+function playGame($name, $rules, $makeQuestionAndAnswer)
 {
     line($rules);
     for ($i = 1; $i <= MAX_QUESTIONS; $i++) {

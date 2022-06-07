@@ -4,6 +4,9 @@
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use function BrainGames\Cli\greeting;
-use function BrainGames\BrainEven\brainEvenGame;
+use function BrainGames\BrainEven\makeQuestionAndAnswer;
+use function BrainGames\Engine\playGame;
 
-brainEvenGame(greeting());
+const EVENRULES = 'Answer "yes" if the number is even, otherwise answer "no".';
+
+playGame(greeting(), EVENRULES, makeQuestionAndAnswer());

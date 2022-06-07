@@ -5,9 +5,9 @@ require_once __DIR__ . '/../vendor/autoload.php';
 
 use function BrainGames\Cli\greeting;
 use function BrainGames\BrainCalc\makeQuestionAndAnswer;
-use function BrainGames\Engine\engine;
+use function BrainGames\Engine\playGame;
 
 
 const CALCRULES = 'What is the result of the expression?';
 
-engine(greeting(), CALCRULES, makeQuestionAndAnswer());
+playGame(greeting(), CALCRULES, makeQuestionAndAnswer());
