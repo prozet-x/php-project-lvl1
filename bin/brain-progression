@@ -1,0 +1,12 @@
+#!/usr/bin/env php
+<?php
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use function BrainGames\Cli\greeting;
+use function BrainGames\BrainProgression\makeQuestionAndAnswer;
+use function BrainGames\Engine\playGame;
+
+const PROGRESSIONRULES = 'What number is missing in the progression?';
+
+playGame(greeting(), PROGRESSIONRULES, makeQuestionAndAnswer());

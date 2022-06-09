@@ -14,7 +14,8 @@ function playGame($name, $rules, $makeQuestionAndAnswer)
         $qA = $makeQuestionAndAnswer();
         $question = $qA[0];
         $rightAnswer = $qA[1];
-        $answer = prompt("Question: {$question}: ");
+        line("Question: {$question}");
+        $answer = prompt('Your answer');
         if ($answer != $rightAnswer) {
             line("'{$answer}' is wrong answer ;(. Correct answer was '{$rightAnswer}'.");
             line("Let's try again, {$name}!");
