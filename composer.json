@@ -6,13 +6,14 @@
     "bin": [
         "bin/brain-games",
         "bin/brain-even",
-        "bin/brain-calc"
+        "bin/brain-calc",
+        "bin/brain-gcd"
       ],
     "autoload": {
         "psr-4": {
             "Hexlet\\Code\\": "src/"
         },
-        "files": ["src/Cli.php", "src/Games/Brain-even.php", "src/Games/Brain-calc.php", "src/Engine.php"]
+        "files": ["src/Cli.php", "src/Games/Brain-even.php", "src/Games/Brain-calc.php", "src/Games/Brain-gcd.php", "src/Engine.php"]
     },
     "authors": [
         {

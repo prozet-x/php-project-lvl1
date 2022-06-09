@@ -1,0 +1,12 @@
+#!/usr/bin/env php
+<?php
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use function BrainGames\Cli\greeting;
+use function BrainGames\BrainGCD\makeQuestionAndAnswer;
+use function BrainGames\Engine\playGame;
+
+const GCDRULES = 'Find the greatest common divisor of given numbers.';
+
+playGame(greeting(), GCDRULES, makeQuestionAndAnswer());
